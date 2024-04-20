@@ -1,5 +1,6 @@
-const BASE_URL = process.env.REACT_APP_BASE_URL
-
+// const BASE_URL = process.env.REACT_APP_BASE_URL
+// const BASE_URL="http://localhost:9889/api/v1"
+const BASE_URL="/api/v1"
 // AUTH ENDPOINTS
 export const endpoints = {
   SENDOTP_API: BASE_URL + "/auth/sendotp",

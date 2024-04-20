@@ -79,7 +79,7 @@ exports.categoryPageDetails = async (req, res) => {
     })
     let differentCategory = await Category.findOne(
       categoriesExceptSelected[getRandomInt(categoriesExceptSelected.length)]
-        ._id
+        ?._id
     )
       .populate({
         path: "courses",
@@ -108,6 +108,7 @@ exports.categoryPageDetails = async (req, res) => {
       },
     })
   } catch (error) {
+    console.log(error);
     return res.status(500).json({
       success: false,
       message: "Internal server error",

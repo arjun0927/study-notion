@@ -14,10 +14,10 @@ const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 const path=require("path")
 // Setting up port number
-const PORT = process.env.PORT || 4000;
-
-// Loading environment variables from .env file
 dotenv.config();
+const PORT = process.env.PORT || 4000;
+	console.log(process.env.PORT);
+// Loading environment variables from .env file
 
 // Connecting to database
 database.connect();
